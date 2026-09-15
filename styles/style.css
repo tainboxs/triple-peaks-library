@@ -155,16 +155,32 @@
 }
 
 @media (max-width: 768px) {
-  .page {
-    min-width: 320px;
-    width: 100%;
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
   }
 
+  html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .page {
+    min-width: 0 !important;
+    width: 100% !important;
+    overflow-x: hidden;
+  }
+
+  /* Header */
   .header {
     height: auto;
     min-height: unset;
     max-height: unset;
-    padding: 20px;
+    padding: 20px 16px;
   }
 
   .header__content {
@@ -175,7 +191,7 @@
   .header__title {
     font-size: 32px;
     line-height: 40px;
-    margin-top: 40px;
+    margin-top: 30px;
     text-align: center;
   }
 
@@ -183,16 +199,48 @@
     font-size: 16px;
     line-height: 24px;
     text-align: center;
+    margin-top: 16px;
   }
 
   .header__image {
     width: 100%;
     max-width: 100%;
+    height: auto;
     margin-top: 24px;
+  }
+
+  .header__footer {
+    justify-content: center;
+    margin-top: 24px;
+  }
+
+  /* Seção Staff / Livros */
+  .staff {
+    padding: 60px 16px 80px;
+  }
+
+  .staff__title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .staff__subtitle {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .staff__cards {
+    max-width: 100%;
+    margin-top: 32px;
+    padding: 0;
+    gap: 20px;
   }
 
   .card {
     width: 100%;
-    max-width: 360px;
+    max-width: 320px;
+    height: auto;
+    min-height: 380px;
+    padding: 24px 20px;
   }
 }
