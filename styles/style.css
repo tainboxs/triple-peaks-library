@@ -1,3 +1,17 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 .page {
   width: 100%;
   min-width: 320px;
@@ -56,11 +70,14 @@
   margin: 128px 0 0;
 }
 
+/* Texto de introdução da biblioteca: Justificado */
 .header__description {
   max-width: 515px;
   font-size: 20px;
   line-height: 30px;
   margin: 32px 0 0;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .header__image {
@@ -141,10 +158,13 @@
   margin: 0;
 }
 
+/* Texto das resenhas dos cards: Justificado */
 .card__text {
   margin: 20px 0 0;
   font-size: 16px;
   line-height: 24px;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .card__footer {
@@ -155,30 +175,14 @@
   color: #838383;
 }
 
-/* Regras para dispositivos móveis */
+/* ================= AJUSTES MOBILE ================= */
 @media (max-width: 768px) {
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box !important;
-  }
-
-  html,
-  body {
-    overflow-x: hidden !important;
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
   .page {
     min-width: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
-    overflow-x: hidden !important;
   }
 
-  /* Header */
   .header {
     height: auto !important;
     min-height: unset !important;
@@ -202,11 +206,9 @@
   }
 
   .header__content {
-    display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     width: 100% !important;
-    max-width: 100% !important;
   }
 
   .header__content > div {
@@ -219,47 +221,44 @@
     line-height: 34px !important;
     margin-top: 32px !important;
     text-align: center !important;
-    max-width: 100% !important;
   }
 
+  /* Introdução justificada também no mobile */
   .header__description {
     font-size: 16px !important;
     line-height: 24px !important;
-    text-align: center !important;
+    text-align: justify !important;
+    hyphens: auto !important;
     margin-top: 16px !important;
-    max-width: 100% !important;
   }
 
-  /* Trava estrita na imagem */
   .header__image {
     display: block !important;
     width: 100% !important;
-    max-width: 320px !important;
+    max-width: 280px !important;
     height: auto !important;
     margin: 24px auto 0 !important;
-    object-fit: contain !important;
   }
 
   .header__footer {
     justify-content: center !important;
     margin-top: 32px !important;
-    text-align: center !important;
   }
 
-  /* Seção Staff / Livros */
   .staff {
     padding: 60px 16px 80px !important;
-    width: 100% !important;
   }
 
   .staff__title {
     font-size: 28px !important;
     line-height: 36px !important;
+    text-align: center !important;
   }
 
   .staff__subtitle {
     font-size: 16px !important;
     line-height: 24px !important;
+    text-align: center !important;
   }
 
   .staff__cards {
@@ -277,5 +276,11 @@
     min-height: 360px !important;
     padding: 24px 20px !important;
     margin: 0 auto !important;
+  }
+
+  /* Cards justificados no mobile */
+  .card__text {
+    text-align: justify !important;
+    hyphens: auto !important;
   }
 }
