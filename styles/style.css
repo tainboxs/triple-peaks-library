@@ -175,6 +175,59 @@ body {
   color: #838383;
 }
 
+/* Estilos base da secção de membros (computador / geral) */
+.membership {
+  background-color: #d9e8ff;
+  padding: 100px 0 120px;
+}
+
+.membership__container {
+  max-width: 1184px;
+  margin: 0 auto;
+  padding: 0 80px;
+}
+
+.membership__title {
+  text-align: center;
+  font-size: 44px;
+  line-height: 52px;
+  font-weight: 500;
+  margin: 0 0 60px;
+  color: #000000;
+}
+
+.membership__steps {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.membership__step {
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 32px;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+.membership__step-title {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  color: #000000;
+}
+
+.membership__step-text {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+  color: #000000;
+}
+
 /* ================= AJUSTES MOBILE ================= */
 @media (max-width: 768px) {
   .page {
@@ -282,5 +335,36 @@ body {
   .card__text {
     text-align: justify !important;
     hyphens: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* (os teus estilos mobile anteriores continuam aqui em cima) */
+
+  /* Ajustes mobile para a secção de membros */
+  .membership {
+    padding: 60px 16px 80px !important;
+  }
+
+  .membership__container {
+    padding: 0 !important;
+  }
+
+  .membership__title {
+    font-size: 28px !important;
+    line-height: 36px !important;
+    margin-bottom: 32px !important;
+  }
+
+  .membership__steps {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 20px !important;
+  }
+
+  .membership__step {
+    width: 100% !important;
+    max-width: 320px !important;
+    padding: 24px !important;
   }
 }
